@@ -1,0 +1,31 @@
+body{
+    background-color: #a5eb6e
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: rgb(68, 42, 42);
+  
+}
+.float-container {
+    border: 2px solid darkblue;
+    padding: 20px;
+}
+.float-container {
+   content:"";
+   clear:both;
+   display: block;
+
+}
+.float {
+    float: left;
+    margin-right: 30px;
+    border: 1px solid darkblue;
+    height: 500px;
+    width: 30%;
+    background-color: #ff0000
+}
+.p {
+    border: 1px solid darkblue;
+}
+.right {
+    float:right
+}

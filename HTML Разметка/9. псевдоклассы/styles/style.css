@@ -1,0 +1,35 @@
+body{
+    background-color: ;
+    font-family: Arial, sans-serif;
+    font-size: 20pt;
+    color: rgb(68, 42, 42);
+    text-align: left;
+}
+li:first-child{
+    color:blueviolet;
+}
+li:nth-child(2n-1){
+    color:blueviolet;
+    font-size:16pt;
+}
+ol{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+ol>li{
+    border: 1px solid #ff0000;
+    padding:5px;
+    transition-duration: 0.5s;
+}
+li:hover{
+    background-color: aquamarine;
+    transition-duration: 0.5s;
+}
+.submenu{
+    display:none;
+    list-style: none;
+}
+li.top-li:hover .submenu{
+    display:block;
+}

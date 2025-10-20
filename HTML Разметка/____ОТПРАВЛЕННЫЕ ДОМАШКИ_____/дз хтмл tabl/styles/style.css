@@ -1,0 +1,32 @@
+body{
+    background-color: #a5eb6e
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: rgb(68, 42, 42);
+  
+}
+table {
+    border: 1px solid #000000;
+    border-collapse:collapse;
+    margin: 0 auto;
+}
+td, th {
+    border: 1px solid #000000;
+    padding: 15pxs
+    width: 33%
+}
+.align {
+    text-align: center;
+}
+.col1 {
+    background-color: #f3ea83;
+}
+.col2 {
+    background-color: #e9cc5b;
+}
+.col3 {
+    background-color: white;
+}
+.col4 {
+    background-color: white;
+}

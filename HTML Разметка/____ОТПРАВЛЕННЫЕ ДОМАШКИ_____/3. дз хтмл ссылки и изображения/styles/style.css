@@ -1,0 +1,17 @@
+body{
+    background-color: wheat;
+    font-family: Arial, sans-serif;
+    font-size: 20pt;
+    color: rgb(68, 42, 42);
+    text-align:left;
+}
+img {
+    display: blok;
+    width: 70%;
+    margin: 20px auto;
+}
+figure {
+    display: blok;
+    width: 700px;
+    margin: 20px auto;
+}

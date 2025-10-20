@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, sans-serif;
+    font-size: 22pt;
+    color: rgb(68, 42, 42);
+    text-align: left;
+}
+main {
+    height: auto;
+    font-size: 30pt;
+    padding: 10px;
+    width: auto;
+    border: 3px solid darkblue;
+    margin: 30px 25px;
+    box-sizing: border-box;
+}
+header {
+    background-color: cornflowerblue;
+    font-size: 14pt;
+    width: auto;
+    border: 3px solid darkblue;
+    margin: 30px 10px;
+}
+footer {
+    background-color: cornflowerblue;
+    font-size: 14pt;
+    width: auto;
+    border: 3px solid darkblue;
+    margin: 30px 10px;
+}
+
+.zastavka {
+    float: right;
+    font-size: 20pt;
+    border: 3px solid darkblue;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    margin: 20px;
+    background-color: #c5c5c5;
+    clear: both;
+}
+
+}
+.text {
+    display: inline;
+    
+    
+}
+img {
+    width: 100%
+}
+h5{
+    color:#4c4c4c
+}

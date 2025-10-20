@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(184, 217, 247);
+    font-family: Arial, sans-serif;
+    font-size: 16pt;
+    color: rgb(68, 42, 42);
+    text-align: left;
+}
+.author{
+    font-size: 22pt;
+    color: rgb(86, 160, 118);
+    text-align:left ;
+    border: 3px solid #CC9129;
+    padding: 10px;
+}
+.cont{
+    color: black;
+    font-weight: bold;
+}

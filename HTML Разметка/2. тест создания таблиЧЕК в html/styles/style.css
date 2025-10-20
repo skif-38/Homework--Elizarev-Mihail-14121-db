@@ -1,0 +1,32 @@
+body{
+    background-color: ghostwhite;
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: rgb(68, 42, 42);
+  
+}
+table {
+    border: 3px solid #000000;
+    border-collapse:collapse;
+    margin: 0 auto;
+}
+td, th {
+    border: 2px solid #000000;
+    padding: 15pxs
+    width: 33%
+}
+.align {
+    text-align: center;
+}
+.col1 {
+    background-color: red;
+}
+.col2 {
+    background-color: rosybrown;
+}
+.col3 {
+    background-color: powderblue;
+}
+.col4 {
+    background-color: rosybrown;
+}

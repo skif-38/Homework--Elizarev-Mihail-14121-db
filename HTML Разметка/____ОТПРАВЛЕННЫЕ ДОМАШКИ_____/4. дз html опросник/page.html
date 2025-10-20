@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Что вы думаете об обучении в университете?</title>
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+</head>
+<body>
+
+    <form action="#" method="get" required oninput="forrange.value = ran.value">
+        <h1>Что вы думаете об обучении в университете?</h1>
+        <table>
+            <td><label class "sd">1. Насколько вы удовлетворены качеством преподавания в университете?</label></td>
+            </td>
+            <td>
+                <select>
+                    <option>Очень доволен(а)</option>
+                    <option>Скорее доволен(а)</option>
+                    <option>Нейтрально</option>
+                    <option>Скорее недоволен(а)</option>
+                    <option>Очень недоволен(а)</option>
+                </select>
+            </td>
+            </tr>
+            </tr>
+            <td><label class "sd">2. Как вы оцениваете уровень практических занятий в учебном процессе?</label></td>
+            </td>
+            <td>
+                <select>
+                    <option>Очень доволен(а)</option>
+                    <option>Скорее доволен(а)</option>
+                    <option>Нейтрально</option>
+                    <option>Скорее недоволен(а)</option>
+                    <option>Очень недоволен(а)</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td><label>3.Есть ли у вас время на обед?</label></td>
+                <td>
+                    <input type="radio" id="da">
+                    <label for="da">Да</label>
+                    <input type="radio" id="net">
+                    <label for="net">Нет</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label class "sd">4.Где вы обедаете?</label></td>
+                <td>
+                    <select>
+                        <option>В университетской столовой</option>
+                        <option>В кафе</option>
+                        <option>На улице</option>
+                        <option>В здании университета</option>
+                        <option>Не обедаю</option>
+                    </select>
+            </tr>
+            <tr>
+                <td><label>5. Как вы оцениваете организацию учебного процесса по 10 бальной шкале?</label></td>
+                <td>
+                    <label>1</label>
+                    <input type="range" min="1" max="10" id="ran">
+                    <label>10</label>
+                    <div>
+                        <output name="forrange"></output>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td> <label>6.Как по вашему мнению можно лучшить систему обучения в университете?</label></td>
+                <td><textarea rows="10" cols="40" > Ваше предложение:</textarea></td>
+            </tr>
+
+        </table>
+        <input type="submit" />
+        <div>
+            <div><a href=".\as.html" class="s1">Назад к регистрации</a></div>
+            <a href=".\page2.html" class="s1">Завершить опрос</a>
+        </div>
+    </form>
+    
+    
+</body>
+</html>
+
+
+

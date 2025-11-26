@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.block {
+    padding: 30px;
+    border-radius: 8px;
+    background: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Первый блок - выпуклый полукруглый */
+.block-1 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), inset 0 8px 15px rgba(255, 255, 255, 0.9), inset 0 -8px 15px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+    .block-1:hover {
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.95), inset 0 -10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+/* Второй блок - поворот левой стороной */
+.block-2 {
+    box-shadow: -8px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: perspective(500px) rotateY(-3deg);
+}
+
+    .block-2:hover {
+        box-shadow: -12px 8px 20px rgba(0, 0, 0, 0.3);
+        transform: perspective(500px) rotateY(-6deg);
+    }
+
+/* Третий блок - поворот правой стороной */
+.block-3 {
+    box-shadow: 8px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: perspective(500px) rotateY(3deg);
+}
+
+    .block-3:hover {
+        box-shadow: 12px 8px 20px rgba(0, 0, 0, 0.3);
+        transform: perspective(500px) rotateY(6deg);
+    }
+
+/* Четвертый блок - изогнутая лента */
+.block-4 {
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    transform: perspective(800px) rotateX(10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.1), inset 0 15px 30px rgba(255, 255, 255, 0.8);
+}
+
+    .block-4::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.9) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.9) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.05) 0%, transparent 50%);
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+    .block-4:hover {
+        transform: perspective(800px) rotateX(15deg);
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.35), inset 0 -20px 35px rgba(0, 0, 0, 0.15), inset 0 20px 35px rgba(255, 255, 255, 0.9);
+    }

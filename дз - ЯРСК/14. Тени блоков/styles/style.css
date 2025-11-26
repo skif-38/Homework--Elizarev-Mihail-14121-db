@@ -32,7 +32,6 @@ body {
     justify-content: center;
 }
 
-/* Первый блок - выпуклый полукруглый */
 .block-1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), inset 0 8px 15px rgba(255, 255, 255, 0.9), inset 0 -8px 15px rgba(0, 0, 0, 0.05);
     background: linear-gradient(to bottom, #ffffff, #f8f9fa);
@@ -42,7 +41,6 @@ body {
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.95), inset 0 -10px 20px rgba(0, 0, 0, 0.08);
     }
 
-/* Второй блок - поворот левой стороной */
 .block-2 {
     box-shadow: -8px 5px 15px rgba(0, 0, 0, 0.2);
     transform: perspective(500px) rotateY(-3deg);
@@ -53,7 +51,6 @@ body {
         transform: perspective(500px) rotateY(-6deg);
     }
 
-/* Третий блок - поворот правой стороной */
 .block-3 {
     box-shadow: 8px 5px 15px rgba(0, 0, 0, 0.2);
     transform: perspective(500px) rotateY(3deg);
@@ -64,7 +61,6 @@ body {
         transform: perspective(500px) rotateY(6deg);
     }
 
-/* Четвертый блок - изогнутая лента */
 .block-4 {
     position: relative;
     background: linear-gradient(to bottom, #ffffff, #f8f9fa);

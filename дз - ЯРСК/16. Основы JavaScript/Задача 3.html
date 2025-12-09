@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задачки со скриптами</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <h1>Задачки со скриптами</h1>
+    <script>
+        let N = parseInt(prompt("Задание 3: Введите число N для проверки, является ли оно степенью двойки: ", 10));
+        let res = 0;
+        for (let i = 1; i < 100; i++) {
+            if (N == 2 ** i) {
+                res += 1;
+                break;
+            }
+        }
+        if (res > 0) {
+            alert("YES");
+        }
+        else {
+            alert("NO");
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задачки со скриптами</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <h1>Задачки со скриптами</h1>
+    <script>
+        let nam = prompt("Введите число до которого будут выводиться все точные квадраты натуральных чисел:", 100);
+        let i = 1;
+        let result = " ";
+        while (i*i < nam) {
+            result += i * i + ", ";
+            i++;
+        }
+        alert(`Точные квадраты натуральных числел, не привышающие ${nam}: ${result}`);
+    </script>
+</body>
+</html>

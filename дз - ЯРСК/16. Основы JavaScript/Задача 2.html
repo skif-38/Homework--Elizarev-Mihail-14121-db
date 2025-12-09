@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задачки со скриптами</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <h1>Задачки со скриптами</h1>
+    <script>
+        let a = parseInt(prompt("Введите число а: ", -5));
+        let b = parseInt(prompt("Введите число b: ", 12));
+        let count = 0;
+        let sum = 0;
+        for (let i = a; i <= b; i++) {
+            if (i % 3 == 0) {
+                count++;
+                sum += i;
+            }
+        }
+        let result = sum / count;
+        alert(`Cреднее арифметическое всех чисел, которые делятся на 3 из отрезка [a;b] = ${result}`);
+    </script>
+</body>
+</html>

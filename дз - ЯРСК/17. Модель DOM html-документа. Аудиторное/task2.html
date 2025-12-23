@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+</head>
+<body>
+    <form name="search">
+        <label>
+            Поиск по сайту:
+            <input type="text" name="search">
+        </label>
+        <input type="submit" value="Искать!">
+    </form>
+
+    <hr>
+
+    <form name="search-person">
+        Поиск по анкете:
+        <table id="age-table">
+            <tr>
+                <td>Возраст:</td>
+                <td id="age-list">
+                    <label>
+                        <input type="radio" name="age" value="young">До 18
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="mature">18-50
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="senior">Старше 50
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Дополнительно:</td>
+                <td>
+                    <input type="text" name="info[0]">
+                    <input type="text" name="info[1]">
+                    <input type="text" name="info[2]">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Искать!">
+    </form>
+
+    <script>
+        console.log("Пункт 1");
+        let elem = document.getElementById('age-list');
+        console.log(elem.textContent);
+    </script>
+    
+    <script>
+        console.log("Пункт 2");
+        let table = document.getElementById('age-table');
+        let cell = table.getElementsByTagName('td')[0];
+        console.log(cell.textContent);
+    </script>
+
+    <script>
+        console.log("Пункт 3");
+        let forma2 = document.body.childNodes[5];
+        console.log(forma2);
+    </script>
+
+    <script>
+        console.log("Пункт 4");
+        let sib = document.body.childNodes[2];
+        let forma1 = sib.previousSibling;
+        console.log(forma1);
+    </script>
+
+    <script>
+        console.log("Пункт 5");
+        let forma = document.forms.search;
+        let firstInput = forma.getElementsByTagName('input')[0];
+        console.log(firstInput);
+    </script>
+
+    <script>
+        console.log("Пункт 6");
+        let element = document.getElementsByName('info[0]');
+        let firstElement = element[0];
+        console.log(firstElement);
+    </script>
+
+    <script>
+        console.log("Пункт 7");
+        const form = document.forms['search-person'];
+        const info0 = form.querySelector('[name="info[0]"]');
+        console.log(info0);
+    </script>
+</body>
+</html>

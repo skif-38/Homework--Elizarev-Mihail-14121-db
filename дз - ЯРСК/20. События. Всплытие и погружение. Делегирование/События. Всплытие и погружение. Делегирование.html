@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Задание: Список и Таблица</title>
+    <style>
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .toggle {
+            cursor: pointer;
+            color: blue;
+            padding: 0 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. Список </h2>
+    <ul id="list">
+        <li>
+            <span class="toggle">+</span> Раздел А
+            <ul>
+                <li>
+                    <span class="toggle">+</span> Подраздел А.1
+                    <ul>
+                        <li>Пункт А.1.1</li>
+                        <li>Пункт А.1.2</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle">+</span> Подраздел А.2
+                    <ul>
+                        <li>Пункт А.2.1</li>
+                        <li>Пункт А.2.2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span class="toggle">+</span> Раздел Б
+            <ul>
+                <li>
+                    <span class="toggle">+</span> Подраздел Б.1
+                    <ul>
+                        <li>Пункт Б.1.1</li>
+                        <li>Пункт Б.1.2</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle">+</span> Подраздел Б.2
+                    <ul>
+                        <li>Пункт Б.2.1</li>
+                        <li>Пункт Б.2.2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>2. Таблица с изменением цвета:</h2>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById('list').onclick = function (e) {
+            if (e.target.className === 'toggle') {
+                const nextUL = e.target.nextElementSibling;
+                if (nextUL && nextUL.tagName === 'UL') {
+                    nextUL.classList.toggle('hidden');
+                    e.target.textContent = nextUL.classList.contains('hidden') ? '+' : '-';
+                }
+            }
+        };
+
+        document.querySelectorAll('#list ul').forEach(ul => {
+            ul.classList.add('hidden');
+        });
+    </script>
+
+    <script>
+        document.addEventListener('click', (event) => {
+            if (event.target.tagName === 'TD') {
+                let rand = () => Math.floor(Math.random() * 256);
+                let r = rand();
+                let g = rand();
+                let b = rand();
+                event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            }
+        }) 
+    </script>
+</body>
+</html>

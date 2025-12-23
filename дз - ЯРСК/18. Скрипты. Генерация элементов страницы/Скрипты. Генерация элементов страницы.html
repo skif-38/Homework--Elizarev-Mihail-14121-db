@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .light {
+            background: white;
+            color: black;
+        }
+
+        .dark {
+            background: #333;
+            color: white;
+        }
+
+        .light li {
+            color: blue;
+            list-style: circle;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .dark li {
+            color: yellow;
+            list-style: square;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        h1 {
+            cursor: pointer;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="light" id="body">
+    <h1 onclick="toggleTheme()">Мой список</h1>
+    <p>Добавляйте пункты в список (ESC или пустая строка - остановка)</p>
+
+    <button onclick="startAdding()">Добавить пункты</button>
+    <button onclick="toggleTheme()">Сменить тему</button>
+
+    <div style="margin: 15px 0;">
+        <input id="itemInput" placeholder="Или введите здесь">
+    </div>
+
+    <ul id="myList"></ul>
+
+    <script>
+        let isAdding = false;
+
+        function startAdding() {
+            isAdding = true;
+            addItemPrompt();
+        }
+
+        function addItemPrompt() {
+            if (!isAdding) return;
+
+            const text = prompt('Введите пункт списка (ESC или пустая строка - остановка):', '');
+
+            if (text.trim() === '') {
+                isAdding = false;
+                alert('Добавление остановлено');
+                return;
+            }
+            addItem(text);
+
+            if (isAdding) {
+                addItemPrompt();
+            }
+        }
+
+        function addItem(text) {
+            const li = document.createElement('li');
+            li.textContent = text;
+            document.getElementById('myList').appendChild(li);
+        }
+
+        function addFromInput() {
+            const input = document.getElementById('itemInput');
+            const text = input.value.trim();
+            addItem(text);
+            input.value = '';
+            input.focus();
+        }
+
+        function toggleTheme() {
+            const body = document.getElementById('body');
+            body.className = body.className === 'light' ? 'dark' : 'light';
+        }
+
+        document.getElementById('itemInput').onkeydown = function (e) {
+            if (e.key === 'Enter') {
+                addFromInput();
+            }
+            if (e.key === 'Escape') {
+                this.value = '';
+                this.blur();
+            }
+        };
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && isAdding) {
+                isAdding = false;
+                alert('Добавление остановлено');
+            }
+        });
+    </script>
+</body>
+</html>

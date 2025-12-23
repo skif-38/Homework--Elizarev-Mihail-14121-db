@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Книжный магазин</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #2c3e50; 
+        }
+
+        h1 {
+            text-align: center;
+            color: #ecf0f1;
+            margin-bottom: 30px;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+            padding: 20px;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            transition: transform 0.3s;
+            gap: 30px;
+        }
+
+        .slide {
+            min-width: 280px;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+            .slide:nth-child(1) {
+                background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            }
+
+            .slide:nth-child(2) {
+                background: linear-gradient(135deg, #81ecec, #74b9ff);
+            }
+
+            .slide:nth-child(3) {
+                background: linear-gradient(135deg, #a29bfe, #dfe6e9);
+            }
+
+            .slide:nth-child(4) {
+                background: linear-gradient(135deg, #55efc4, #00cec9);
+            }
+
+            .slide:nth-child(5) {
+                background: linear-gradient(135deg, #fd79a8, #e17055);
+            }
+
+        .book-cover {
+            width: 160px;
+            height: 220px;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+            .book-cover img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .book-cover .placeholder {
+                padding: 10px;
+                text-align: center;
+                color: #7f8c8d;
+                font-size: 14px;
+            }
+
+        .book-title {
+            font-weight: bold;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        .book-author {
+            color: #34495e;
+            margin: 5px 0;
+        }
+
+        .book-genre {
+            color: #2c3e50;
+            font-size: 14px;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .book-price {
+            color: #c0392b;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 15px 0 5px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 100px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #e74c3c;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+            .arrow:hover {
+                background: #c0392b;
+                transform: translateY(-50%) scale(1.1);
+            }
+
+        .arrow-left {
+            left: 20px;
+        }
+
+        .arrow-right {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Книжный магазин</h1>
+
+    <div class="slider-container">
+        <button class="arrow arrow-left" onclick="moveSlide(-1)">‹</button>
+
+        <div class="slides-wrapper" id="slidesWrapper">
+            <div class="slide">
+                <div class="book-cover">
+                    <img src="./вим.jpg" alt="Война и мир">
+                </div>
+                <div class="book-title">Война и мир</div>
+                <div class="book-author">Лев Толстой</div>
+                <div class="book-genre">Роман-эпопея</div>
+                <div class="book-price">850 ₽</div>
+            </div>
+
+            <div class="slide">
+                <div class="book-cover">
+                    <img src="./пин.jpg">
+                </div>
+                <div class="book-title">Преступление и наказание</div>
+                <div class="book-author">Фёдор Достоевский</div>
+                <div class="book-genre">Психологический роман</div>
+                <div class="book-price">590 ₽</div>
+            </div>
+
+            <div class="slide">
+                <div class="book-cover">
+                    <img src="./ео.jpg">
+                </div>
+                <div class="book-title">Евгений Онегин</div>
+                <div class="book-author">Александр Пушкин</div>
+                <div class="book-genre">Роман в стихах</div>
+                <div class="book-price">480 ₽</div>
+            </div>
+
+            <div class="slide">
+                <div class="book-cover">
+                    <img src="./мд.jpg">
+                </div>
+                <div class="book-title">Мёртвые души</div>
+                <div class="book-author">Николай Гоголь</div>
+                <div class="book-genre">Поэма</div>
+                <div class="book-price">520 ₽</div>
+            </div>
+
+            <div class="slide">
+                <div class="book-cover">
+                    <img src="./оид.jpg">
+                </div>
+                <div class="book-title">Отцы и дети</div>
+                <div class="book-author">Иван Тургенев</div>
+                <div class="book-genre">Социальный роман</div>
+                <div class="book-price">450 ₽</div>
+            </div>
+        </div>
+
+        <button class="arrow arrow-right" onclick="moveSlide(1)">›</button>
+    </div>
+
+    <script>
+        let currentPosition = 0;
+        const slideWidth = 310;
+        const visibleSlides = 3;
+        const totalSlides = 5;
+
+        const slidesWrapper = document.getElementById('slidesWrapper');
+
+        function moveSlide(direction) {
+            const maxPosition = (totalSlides - visibleSlides) * slideWidth;
+
+            currentPosition += direction * slideWidth * visibleSlides;
+
+            if (currentPosition < 0) {
+                currentPosition = 0;
+            } else if (currentPosition > maxPosition) {
+                currentPosition = maxPosition;
+            }
+
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slidesWrapper.style.transform = `translateX(-${currentPosition}px)`;
+        }
+
+        updateSlider();
+    </script>
+</body>
+</html>
